@@ -1,0 +1,21 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<title>Teste</title>
+		<link rel="stylesheet" type="text/css" href="../static/styles.css">
+	</head>
+	<body>
+		<h1>Controle GPIO</h1>
+		<a class="botLigarLed" onclick="gpioWrite(2,1)">Ligar Led</a>
+		</br>
+		<a class="botDesligarLed" onclick="gpioWrite(2,0)">Desligar Led</a>
+		</br>
+		<input type="range" id="range" min="500" max="2500" value="1500" oninput="servoWrite()"/>
+		</br>
+		<input type="range" id="range2" min="500" max="2500" value="1500" onmouseup="servoWrite2()" orient="vertical" style="transform: rotateX(180deg);"/>
+		
+		<img src="{{ url_for('video_feed') }}">
+		
+		<script src="../static/scripts.js"></script>
+	</body>
+</html>
